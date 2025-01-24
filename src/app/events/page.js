@@ -24,7 +24,7 @@ export default async function Events() {
           </div>
         ))}
       </div>
-      <button id="button" onClick={createEvents} className="border border-black rounded-full mt-12 py-2 px-3 hover:text-white hover:bg-black">Create Events</button>
+      <button id="button" className="border border-black rounded-full mt-12 py-2 px-3 hover:text-white hover:bg-black">Create Events</button>
       <div id="popup" className="bg-red-600 hidden">
         <label>Event's name</label>
         <input type="text" placeholder="name"/>
