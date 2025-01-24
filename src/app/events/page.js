@@ -1,10 +1,17 @@
 export default async function Events() {
   const res = await fetch('http://localhost:3000/api/events', {cache: 'no-store'});
   const events = await res.json();
-  const createEvents = () => {
-    let popup = getElementById("id");
-    popup
-  }
+  const button = document.getElementById('button');
+  const popup = document.getElementById('popup');
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    if (canvas.style.display = 'block'){
+      canvas.style.display = 'none'
+    }
+    else (canvas.style.display = 'block')
+  })
+
+
   return(
     <div className="p-8">
       <h1>Evenement 1</h1>
@@ -17,8 +24,8 @@ export default async function Events() {
           </div>
         ))}
       </div>
-      <button onClick={createEvents} className="border border-black rounded-full mt-12 py-2 px-3 hover:text-white hover:bg-black">Create Events</button>
-      <div id="popup">
+      <button id="button" onClick={createEvents} className="border border-black rounded-full mt-12 py-2 px-3 hover:text-white hover:bg-black">Create Events</button>
+      <div id="popup" className="bg-red-600 hidden">
         <label>Event's name</label>
         <input type="text" placeholder="name"/>
       </div>
